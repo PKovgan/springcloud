@@ -1,0 +1,6 @@
+# Project exclude paths
+/eureka/target/
+/hello/target/
+/hello-world/target/
+/target/
+/zuul/target/

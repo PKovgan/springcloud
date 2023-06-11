@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: Zuul
+
+server:
+  port: 8080
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+zuul:
+  ignored-services: '*'
+  routes:
+    hello:
+      path: /hello/**
+      serviceId: Hello
+      stripPrefix: false
+    hello-world:
+      path: /hello-world/**
+      serviceId: HelloWorld
+      stripPrefix: false
